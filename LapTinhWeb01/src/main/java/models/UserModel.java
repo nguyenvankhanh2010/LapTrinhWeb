@@ -15,14 +15,13 @@ public class UserModel implements Serializable{
 	private int roleid;
 	private Date createdate;
 	
+
 	public UserModel() {
 		super();
 	}
 
-	public UserModel(int id, String username, String password, String images, String fullname, String email,
-			String phone, int roleid, Date createdate) {
-		super();
-		this.id = id;
+	public UserModel( String username, String password, String images, String fullname, String email,String phone, int roleid, Date createdate) {
+//		this.id = id;
 		this.username = username;
 		this.password = password;
 		this.images = images;

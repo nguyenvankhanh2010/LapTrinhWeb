@@ -9,8 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import models.UserModel;
-
-@WebServlet(urlPatterns = { "/waiting" })
+@WebServlet(urlPatterns="/waiting")
 public class waitingController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

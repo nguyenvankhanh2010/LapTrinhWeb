@@ -9,7 +9,17 @@ public interface IUserDao {
 
 	UserModel findById(int id);
 
-	void insert(UserModel user);
+	void insertregister(UserModel user);
 
 	UserModel findByUserName(String username);
+
+	void insert(UserModel user);
+
+	boolean checkExistUsername(String username);
+	
+    boolean changePassword(String email, String newEncodedPassword);
+
+	boolean checkExistEmail(String email);
+
+
 }

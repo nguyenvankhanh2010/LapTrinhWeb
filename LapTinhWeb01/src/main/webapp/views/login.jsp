@@ -14,29 +14,30 @@
 </head>
 <body>
 
-
+	<h2>Đăng nhập</h2>
+	<c:if test="${alert !=null}">
+		<h3 class="alert alertdanger">${alert}</h3>
+	</c:if>
 	<form action="/LapTinhWeb01/login" method="post">
-		<c:if test="${alert !=null}">
-			<h3 class="alert alertdanger">${alert}</h3>
-		</c:if>
-		<div class="container">
-			<label for="uname"><b>Username</b></label> <input type="text"
-				placeholder="Enter Username" name="uname" required> <label
-				for="psw"><b>Password</b></label> <input type="password"
-				placeholder="Enter Password" name="psw" required>
+		<label for="username">Tên đăng nhập:</label><br> <input
+			type="text" id="username" name="uname"><br> <br> <label
+			for="password">Mật khẩu:</label><br> <input type="password"
+			id="password" name="psw"><br> <br>
 
-			<button type="submit">Login</button>
-			<label> <input type="checkbox" checked="checked"
-				name="remember"> Remember me
-			</label>
-		</div>
-
-		<div class="container" style="background-color: #f1f1f1">
-			<button type="button" class="cancelbtn">Cancel</button>
-			<span class="psw">Forgot <a href="#">password?</a></span>
-		</div>
+		<button type="submit">Đăng nhập</button>
 	</form>
 
+	<br>
+	<button type="submit">Đăng ký tài khoản</button>
+	<br>
+	<button type="submit">Quên mật khẩu?</button>
+	<p>
+		<a href="forgot-password" style="text-decoration: none;"> Forgot
+			password? </a>
+	</p>
+	<p>Not registered? <a href="register" style="text-decoration: none;">
+			Create an account </a>
+	</p>
 
 </body>
 </html>
